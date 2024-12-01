@@ -1,0 +1,81 @@
+<div class="home-container">
+  <!-- Hero Section -->
+  <div class="hero-section">
+    <h1>Welcome to My Portfolio</h1>
+    <p>Your one-stop place to explore my skills and projects.</p>
+    <button mat-raised-button color="primary">Explore More</button>
+  </div>
+
+  <!-- About Section -->
+  <div class="about-section">
+    <h2>About Me</h2>
+    <p>
+      Hi! I'm <strong>Lut Lat Aung</strong> aka Alex, a passionate developer skilled in Java, Angular,
+      and creating interactive digital solutions. I thrive on solving challenges
+      and crafting innovative experiences.
+    </p>
+  </div>
+
+  <!-- Skills Section -->
+  <div class="skills-section">
+    <h2>Skills</h2>
+    <div class="skills-container">
+      <span class="skill-chip" *ngFor="let skill of skills">{{ skill }}</span>
+    </div>
+  </div>
+  
+
+  <!-- Projects Section -->
+  <div class="projects-section">
+    <h2>My Projects</h2>
+    <div class="project-cards">
+      <mat-card class="project-card" *ngFor="let project of projects">
+        <mat-card-header>
+          <mat-card-title>{{ project.title }}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p>{{ project.description }}</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button color="accent">View Project</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+
+  <!-- Experience Section -->
+  <div class="experience-section">
+    <h2>Experience</h2>
+    <div class="experience-cards">
+      <div class="experience-card" *ngFor="let exp of experiences">
+        <h3>{{ exp.role }}</h3>
+        <h4>{{ exp.company }}</h4>
+        <p class="duration">{{ exp.duration }}</p>
+        <p class="description">{{ exp.description }}</p>
+      </div>
+    </div>
+  </div>
+  
+
+  <!-- Education Section -->
+  <div class="education-section">
+    <h2>Education</h2>
+    <div class="education-cards">
+      <div class="education-card" *ngFor="let edu of education">
+        <h3>{{ edu.degree || edu.certification }}</h3>
+        <h4>{{ edu.institution || edu.provider }}</h4>
+        <p class="duration">{{ edu.duration }}</p>
+      </div>
+    </div>
+  </div>
+  
+
+  <!-- Contact Section -->
+  <div class="contact-section">
+    <h2>Contact Me</h2>
+    <div class="contact-details">
+      <p><i class="fas fa-envelope"></i> <a href="mailto:lutlataung03@gmail.com">lutlataung03&#64;gmail.com</a></p>
+      <p><i class="fab fa-github"></i> <a href="https://github.com/Lut-Lat-Aung" target="_blank">My GitHub</a></p>
+    </div>
+  </div>
+  

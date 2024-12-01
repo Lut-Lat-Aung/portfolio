@@ -1,0 +1,243 @@
+/* General Styles */
+.home-container {
+    font-family: Arial, sans-serif;
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 1200px;
+  }
+  
+  /* Hero Section */
+  .hero-section {
+    text-align: center;
+    background: linear-gradient(135deg, #007bff, #00d4ff);
+    color: white;
+    padding: 50px 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+  }
+  
+  .hero-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+  }
+  
+  .hero-section p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  /* About Section */
+  .about-section,
+  .skills-section,
+  .projects-section,
+  .experience-section,
+  .education-section,
+  .contact-section {
+    margin: 40px 0;
+  }
+  
+  .about-section p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+  
+  .skills-section h2,
+  .projects-section h2,
+  .experience-section h2,
+  .education-section h2,
+  .contact-section h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+  
+  .skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  /* Skills Section */
+.skills-section {
+    margin: 40px 0;
+  }
+  
+  .skills-section h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+  
+  .skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .skill-chip {
+    background-color: #007bff;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    display: inline-block;
+    cursor: default;
+    transition: transform 0.2s;
+  }
+  
+  .skill-chip:hover {
+    transform: scale(1.1);
+  }
+  
+  
+  /* Projects Section */
+  .project-cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .project-card {
+    width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  mat-card {
+    border-radius: 10px;
+  }
+  
+  /* Experience Section */
+  .experience-item h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .experience-item p {
+    margin: 5px 0;
+  }
+  
+  /* Education Section */
+  .education-item h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .education-item p {
+    margin: 5px 0;
+  }
+  
+  /* General Section Styles */
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Experience Section */
+  .experience-section {
+    margin: 40px 0;
+  }
+  
+  .experience-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .experience-card {
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+  }
+  
+  .experience-card h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #007bff;
+  }
+  
+  .experience-card h4 {
+    margin: 5px 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .experience-card .duration {
+    font-size: 0.9rem;
+    color: gray;
+    margin: 10px 0;
+  }
+  
+  .experience-card .description {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+  /* Education Section */
+  .education-section {
+    margin: 40px 0;
+  }
+  
+  .education-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .education-card {
+    background-color: #ffffff;
+    padding: 20px;
+    border: 2px solid #007bff;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+  }
+  
+  .education-card h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #007bff;
+  }
+  
+  .education-card h4 {
+    margin: 5px 0;
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  .education-card .duration {
+    font-size: 0.9rem;
+    color: gray;
+    margin-top: 10px;
+  }
+  
+  /* Contact Me Section */
+  .contact-section {
+    margin: 40px 0;
+    text-align: center;
+  }
+  
+  .contact-details {
+    font-size: 1.2rem;
+  }
+  
+  .contact-details p {
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .contact-details i {
+    color: #007bff;
+    font-size: 1.5rem;
+  }
+  
