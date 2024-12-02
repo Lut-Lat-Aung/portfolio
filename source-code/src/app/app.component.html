@@ -1,20 +1,47 @@
-<div class="home-container">
-  <!-- Hero Section -->
-  <div class="hero-section">
-    <h1>Welcome to My Portfolio</h1>
-    <p>Your one-stop place to explore my skills and projects.</p>
-    <button mat-raised-button color="primary">Explore More</button>
+<div class="landing-page" id="landing">
+  <div class="intro">
+    <h1 class="pop-in">Hello, I'm Lut Lat Aung</h1>
+    <h2 class="nickname">(aka Alex)</h2>
+    <p>Scroll down to explore my portfolio</p>
+    <a (click)="scrolltocontent()" href="#content" class="scroll-btn">▼</a>
   </div>
+</div>
+
+
+<div id="content">
+  <div class="home-container">
+    <!-- Hero Section -->
+    <div class="hero-section">
+      <h1>Welcome to My Portfolio</h1>
+      <p>Your one-stop place to explore my skills and projects.</p>
+      <button mat-raised-button color="primary">Explore More</button>
+    </div>
 
   <!-- About Section -->
   <div class="about-section">
-    <h2>About Me</h2>
-    <p>
-      Hi! I'm <strong>Lut Lat Aung</strong> aka Alex, a passionate developer skilled in Java, Angular,
-      and creating interactive digital solutions. I thrive on solving challenges
-      and crafting innovative experiences.
-    </p>
+    <h2 class="section-title">About Me</h2>
+    <div class="about-container">
+      <!-- Image Column -->
+      <div class="about-image">
+        <img src="assets/lutlataung.jpg" alt="Lut Lat Aung" />
+      </div>
+      <!-- Text Column -->
+      <div class="about-text">
+        <h3>Lut Lat Aung (Alex)</h3>
+        <h4>Passionate Full-Stack Developer</h4>
+        <p>
+          Hi, I'm <strong>Lut Lat Aung</strong>, aka Alex, a developer passionate about crafting engaging user experiences
+          and solving complex challenges. With expertise in <strong>Java</strong>, <strong>Angular</strong>, and
+          <strong>Unity</strong>, I have a proven track record of delivering innovative solutions.
+        </p>
+        <p>
+          My journey as a developer has been fueled by a love for learning, collaborating, and building
+          impactful projects. Explore my portfolio to see how I bring ideas to life!
+        </p>
+      </div>
+    </div>
   </div>
+  
 
   <!-- Skills Section -->
   <div class="skills-section">
@@ -77,5 +104,6 @@
       <p><i class="fas fa-envelope"></i> <a href="mailto:lutlataung03@gmail.com">lutlataung03&#64;gmail.com</a></p>
       <p><i class="fab fa-github"></i> <a href="https://github.com/Lut-Lat-Aung" target="_blank">My GitHub</a></p>
     </div>
+  </div>
   </div>
   

@@ -12,6 +12,50 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  
+  title = 'source-code';
+  
+  
+  scrolltocontent(): void {
+    const contentsection = document.getElementById('content');
+    if (contentsection) {
+      this.smoothScroll(contentsection, 1200);
+    }
+  }
+  
+  smoothScroll(target: HTMLElement, duration: number): void {
+    const startPosition = window.scrollY;
+    const targetPosition = target.getBoundingClientRect().top + startPosition;
+    const startTime = performance.now();
+  
+    const ease = (t: number, b: number, c: number, d: number) => {
+      t /= d / 2;
+      if (t < 1) return (c / 2) * t * t + b;
+      t--;
+      return (-c / 2) * (t * (t - 2) - 1) + b;
+    };
+  
+    const scrollAnimation = (currentTime: number) => {
+      const elapsedTime = currentTime - startTime;
+      const nextScrollPosition = ease(
+        elapsedTime,
+        startPosition,
+        targetPosition - startPosition,
+        duration
+      );
+      window.scrollTo(0, nextScrollPosition);
+  
+      if (elapsedTime < duration) {
+        requestAnimationFrame(scrollAnimation);
+      } else {
+        window.scrollTo(0, targetPosition); // Ensure exact final position
+      }
+    };
+  
+    requestAnimationFrame(scrollAnimation);
+  }
+
+
   // Projects Data
   projects = [
     {
@@ -23,13 +67,17 @@ export class AppComponent {
       description: 'A publishing platform for poetry, novels, and astrology books.',
     },
     {
+      title: 'Music Player App',
+      description: 'A music player app with a custom playlist feature.',
+    },
+    {
       title: 'Nest Finder',
       description: 'An web app to find and track bird nests in your area.',
     }
   ];
 
   // Skills Data
-  skills = ['Java', 'Angular', 'MongoDB', 'Unity', 'TypeScript', 'CSS', 'HTML'];
+  skills = ['Python','JavaScript','SQL','MongoDB','Java', 'Angular', 'MongoDB', 'Unity', 'TypeScript', 'CSS', 'HTML'];
 
   // Experience Data
   experiences = [
@@ -39,6 +87,11 @@ export class AppComponent {
       company: 'AR Navigation System Project',
       duration: '2023 - 2024',
       description: 'Developed an AR indoor navigation system using Unity and Vuforia.',
+    },{
+      role: 'Web Developer',
+      company: 'Nest Finders',
+      duration: '2023 - 2024',
+      description: 'Developed a web app to find and track bird nests in your area.',
     },
   ];
 

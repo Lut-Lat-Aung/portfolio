@@ -1,3 +1,9 @@
+html {
+  scroll-behavior: smooth;
+
+}
+
+
 /* General Styles */
 .home-container {
     font-family: Arial, sans-serif;
@@ -26,7 +32,148 @@
     margin-bottom: 20px;
   }
   
+
+  /* Landing Page */
+.landing-page {
+  height: 100vh;
+  background: linear-gradient(135deg, #007bff, #00d4ff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.intro h1 {
+  font-size: 3rem;
+  animation: pop-in 1.5s ease-out;
+}
+
+.intro h2 {
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+
+.intro p {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  opacity: 0.8;
+}
+
+.scroll-btn {
+  display: inline-block;
+  margin-top: 30px;
+  font-size: 2rem;
+  text-decoration: none;
+  color: white;
+  animation: bounce 1s infinite;
+}
+
+.scroll-btn:hover {
+  color: #00d4ff;
+}
+
+/* Rest of the content */
+#content {
+  margin-top: 40px;
+}
+
+/* Animations */
+@keyframes pop-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+#hello-word {
+  display: inline-block;
+  transition: opacity 0.5s ease-in-out;
+  opacity: 1;
+}
+
+
   /* About Section */
+.about-section {
+  padding: 50px 20px;
+  background-color: #2a2a40;
+  color: white;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #ffffff;
+}
+
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.about-image {
+  flex: 1;
+  max-width: 300px;
+  text-align: center;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.about-text {
+  flex: 2;
+  max-width: 600px;
+  text-align: left;
+}
+
+.about-text h3 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.about-text h4 {
+  font-size: 1.2rem;
+  color: #00d4ff;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-text {
+    text-align: center;
+  }
+}
+
   .about-section,
   .skills-section,
   .projects-section,
