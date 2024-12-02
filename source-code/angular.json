@@ -75,6 +75,8 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
+            "outputPath": "dist/source-code",
+  "baseHref": "/",
             "buildTarget": "source-code:build"
           }
         },
