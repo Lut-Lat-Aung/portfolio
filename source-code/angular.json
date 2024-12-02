@@ -16,6 +16,7 @@
             "outputPath": "dist/source-code",
             "index": "src/index.html",
             "browser": "src/main.ts",
+            "baseHref": "/",
             "polyfills": [
               "zone.js"
             ],
@@ -75,8 +76,6 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "outputPath": "dist/source-code",
-  "baseHref": "/",
             "buildTarget": "source-code:build"
           }
         },
