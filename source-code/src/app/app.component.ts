@@ -61,20 +61,29 @@ export class AppComponent {
     {
       title: 'AR Navigation System',
       description: 'An indoor navigation system using AR and Vuforia Engine.',
+      github: "https://github.com/Lut-Lat-Aung/AR_Navigation_System",
     },
     {
       title: 'Open Eye Publishing House',
       description: 'A publishing platform for poetry, novels, and astrology books.',
+      github: "https://github.com/Lut-Lat-Aung/maison_d-edition",
     },
     {
       title: 'Music Player App',
       description: 'A music player app with a custom playlist feature.',
+      github: "https://github.com/Lut-Lat-Aung/Music_Player",
     },
     {
       title: 'Nest Finder',
       description: 'An web app to find and track bird nests in your area.',
+      link: 'https://nest-finder-mocha.vercel.app/',
+      github: "https://github.com/Lut-Lat-Aung/nest_finder",
     }
   ];
+
+  openProject(url: string) {
+    window.open(url, '_blank');
+  }
 
   // Skills Data
   skills = ['Python','JavaScript','SQL','MongoDB','Java', 'Angular', 'MongoDB', 'Unity', 'TypeScript', 'CSS', 'HTML'];

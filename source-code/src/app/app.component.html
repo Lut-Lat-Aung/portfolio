@@ -1,7 +1,12 @@
 <div class="landing-page" id="landing">
   <div class="intro">
     <h1 class="pop-in">Hello, I'm Lut Lat Aung</h1>
-    <h2 class="nickname">(aka Alex)</h2>
+    <div class="typing-container">
+      
+    <p class="typewriter">
+      You can count on me to bring your ideas to life
+    </p>
+    </div>
     <p>Scroll down to explore my portfolio</p>
     <a (click)="scrolltocontent()" href="#content" class="scroll-btn">▼</a>
   </div>
@@ -27,11 +32,11 @@
       </div>
       <!-- Text Column -->
       <div class="about-text">
-        <h3>Lut Lat Aung (Alex)</h3>
-        <h4>Passionate Full-Stack Developer</h4>
+        <h3>Lut Lat Aung</h3>
+        <h4>Passionate Full-Stack / Game / AR Developer</h4>
         <p>
           Hi, I'm <strong>Lut Lat Aung</strong>, aka Alex, a developer passionate about crafting engaging user experiences
-          and solving complex challenges. With expertise in <strong>Java</strong>, <strong>Angular</strong>, and
+          and solving complex challenges. With expertise in <strong>Java</strong>, <strong>Angular</strong>, <strong>C#</strong> and
           <strong>Unity</strong>, I have a proven track record of delivering innovative solutions.
         </p>
         <p>
@@ -63,8 +68,15 @@
         <mat-card-content>
           <p>{{ project.description }}</p>
         </mat-card-content>
+        
         <mat-card-actions>
-          <button mat-button color="accent">View Project</button>
+          <a style="margin-left:5px">View -</a>
+          <a *ngIf="project.link">
+          <button mat-button color=""  (click)="openProject(project.link || 'https://github.com/Lut-Lat-Aung')">Project</button>
+          
+          <a style="margin-left:5px">or</a>
+        </a>
+          <button mat-button color="" (click)="openProject(project.github || 'https://github.com/Lut-Lat-Aung')">Github</button>
         </mat-card-actions>
       </mat-card>
     </div>

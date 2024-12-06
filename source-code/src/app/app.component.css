@@ -55,6 +55,7 @@ html{
   margin-top:10px
 }
 .intro p{
+  
   margin-top:20px;
   font-size:1.2rem;
   opacity:.8
@@ -77,11 +78,43 @@ html{
   0%{opacity:0;transform:scale(.8)}
   100%{opacity:1;transform:scale(1)}
 }
+
 @keyframes bounce{
   0%,
   100%{transform:translateY(0)}
   50%{transform:translateY(-10px)}
 }
+
+.typing-container {
+  display: inline-block;
+}
+
+.typewriter {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  display: inline-block;
+  border-right: .10em solid black; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .1em; /* Adjust as needed */
+  animation: 
+    typing 2.5s steps(60, end),
+    blink-caret .75s step-end infinite; /* Stop after the sentence end*/
+    
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: white; }
+}
+
+
 #hello-word{
   display:inline-block;
   transition:opacity .5s ease-in-out;
