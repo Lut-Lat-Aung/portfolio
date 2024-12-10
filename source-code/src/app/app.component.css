@@ -1,10 +1,26 @@
-.hero-section,.landing-page{
-  background:linear-gradient(135deg,#007bff,#00d4ff)
+.landing-page {
+  background: linear-gradient(135deg, rgba(0, 123, 255, 0.9), rgba(0, 212, 255, 0.9)), url('/assets/herobackground.gif') no-repeat center center ;
+  background-size: cover; /* Ensures the GIF covers the section */
+  width: 100%; /* Full width */
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  flex-direction: column; /* Stack hero-section elements */
+  align-items: center; /* Center content horizontally */
+  justify-content: center; /* Center content vertically */
+  color: white; /* Text color for better contrast */
+  text-align: center;
+}
+
+.hero-section{
+  background: linear-gradient(135deg, rgba(0, 123, 255, 0.7), rgba(0, 212, 255, 0.7)), url('/assets/landingbackground.gif') no-repeat;
+  background-size: cover; /* Ensures the GIF covers the section */
 }
 
 .experience-card,.project-card{
   box-shadow:0 4px 6px rgba(0,0,0,.1)
 }
+
+
 
 html{
   scroll-behavior:smooth
@@ -57,9 +73,21 @@ html{
 .intro p{
   
   margin-top:20px;
-  font-size:1.2rem;
+  font-size:1.5rem;
   opacity:.8
 }
+
+@media (max-width:480px){
+  .intro h1{
+    font-size:2rem
+  
+  }
+  .intro p{
+    font-size:1rem
+  }
+  
+}
+
 .scroll-btn{
   display:inline-block;
   margin-top:30px;
@@ -72,7 +100,7 @@ html{
   color:#00d4ff
 }
 #content{
-  margin-top:40px
+  background-color:beige;
 }
 @keyframes pop-in{
   0%{opacity:0;transform:scale(.8)}
@@ -84,6 +112,8 @@ html{
   100%{transform:translateY(0)}
   50%{transform:translateY(-10px)}
 }
+
+
 
 .typing-container {
   display: inline-block;

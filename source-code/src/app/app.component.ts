@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatChipsModule } from '@angular/material/chips';
 import { CommonModule } from '@angular/common';
+
 
 @Component({
   selector: 'app-root',
@@ -11,8 +12,58 @@ import { CommonModule } from '@angular/common';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  
+export class AppComponent implements OnInit {
+  sentences = [
+    
+    "The developer who brings your ideas to life.",
+    "Let’s build something extraordinary together!",
+    "Transforming challenges into opportunities for growth.",
+    'Innovation and creativity are my strengths.',
+  ];
+  currentText = ''; // The text currently being displayed
+  index = 0; // Current sentence index
+  typingSpeed = 79; // Typing speed in milliseconds
+  deletingSpeed = 30; // Speed when deleting text
+  pauseTime = 2000; // Pause time before switching sentences
+
+  ngOnInit() {
+    this.startTyping();
+  }
+
+  startTyping() {
+    const typeSentence = () => {
+      const currentSentence = this.sentences[this.index];
+
+      if (this.currentText.length < currentSentence.length) {
+        // Add one character at a time
+        this.currentText += currentSentence[this.currentText.length];
+        setTimeout(typeSentence, this.typingSpeed);
+      } else {
+        // Pause before deleting or switching to the next sentence
+        setTimeout(() => {
+          this.startDeleting();
+        }, this.pauseTime);
+      }
+    };
+
+    typeSentence();
+  }
+
+  startDeleting() {
+    const deleteSentence = () => {
+      if (this.currentText.length > 0) {
+        // Remove one character at a time
+        this.currentText = this.currentText.slice(0, -1);
+        setTimeout(deleteSentence, this.deletingSpeed);
+      } else {
+        // Move to the next sentence
+        this.index = (this.index + 1) % this.sentences.length;
+        this.startTyping();
+      }
+    };
+
+    deleteSentence();
+  }
   title = 'source-code';
   
   
@@ -94,7 +145,7 @@ export class AppComponent {
     {
       role: 'AR Developer',
       company: 'AR Navigation System Project',
-      duration: '2023 - 2024',
+      duration: '2023 - 2025',
       description: 'Developed an AR indoor navigation system using Unity and Vuforia.',
     },{
       role: 'Web Developer',
@@ -109,12 +160,12 @@ export class AppComponent {
     {
       degree: "Bachelor's Degree in Computer Science",
       institution: 'Assumption University',
-      duration: '2020 - 2024',
+      duration: '2021 - 2025',
     },
     {
-      certification: 'A1 French Certification',
+      certification: 'A1 French Level - 18',
       provider: 'Duolingo',
-      duration: '2023',
+      duration: '2024',
     },
   ];
 }

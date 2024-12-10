@@ -1,11 +1,11 @@
+
 <div class="landing-page" id="landing">
   <div class="intro">
     <h1 class="pop-in">Hello, I'm Lut Lat Aung</h1>
     <div class="typing-container">
       
-    <p class="typewriter">
-      You can count on me to bring your ideas to life
-    </p>
+    <p >
+      {{ currentText }}    </p>
     </div>
     <p>Scroll down to explore my portfolio</p>
     <a (click)="scrolltocontent()" href="#content" class="scroll-btn">▼</a>
@@ -19,7 +19,8 @@
     <div class="hero-section">
       <h1>Welcome to My Portfolio</h1>
       <p>Your one-stop place to explore my skills and projects.</p>
-      <button mat-raised-button color="primary">Explore More</button>
+      <button mat-raised-button color="primary" (click)="openProject('https://github.com/Lut-Lat-Aung')">Explore Github</button>
+
     </div>
 
   <!-- About Section -->
