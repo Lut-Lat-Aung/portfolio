@@ -60,7 +60,7 @@ Follow these steps to clone and run the project on your local machine:
 1. Clone this repository:
 
    ```bash
-   git clone https://github.com/YourUsername/portfolio.git
+   git clone https://github.com/Lut-Lat-Aung/portfolio.git
    ```
 
 2. Navigate to the project folder:
