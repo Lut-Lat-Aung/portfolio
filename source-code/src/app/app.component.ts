@@ -63,16 +63,15 @@ export class AppComponent implements OnInit {
   
   sentences = [
     
-    "The developer who brings your ideas to life.",
-    "Let’s build something extraordinary together!",
-    "Transforming challenges into opportunities for growth.",
-    'Innovation and creativity are my strengths.',
+    "A dedicated Developer",
+    "Developer of AR indoor Navigation App",
+    "I create websites and softwares",
   ];
   currentText = ''; // The text currently being displayed
   index = 0; // Current sentence index
-  typingSpeed = 79; // Typing speed in milliseconds
+  typingSpeed = 120; // Typing speed in milliseconds
   deletingSpeed = 30; // Speed when deleting text
-  pauseTime = 2000; // Pause time before switching sentences
+  pauseTime = 2300; // Pause time before switching sentences
 
   ngOnInit() {
     this.startTyping();
@@ -174,7 +173,7 @@ export class AppComponent implements OnInit {
     },
     {
       title: 'Nest Finder',
-      description: 'An web app to find and track bird nests in your area.',
+      description: 'A web app to find local household for rent or sell near ABAC, Thailand',
       link: 'https://nest-finder-mocha.vercel.app/',
       github: "https://github.com/Lut-Lat-Aung/nest_finder",
     }
@@ -201,7 +200,7 @@ export class AppComponent implements OnInit {
       role: 'Web Developer',
       company: 'Nest Finders',
       duration: '2023 - 2024',
-      description: 'Developed a web app to find and track bird nests in your area.',
+      description: 'Developed a web app to find local household for rent or sell near ABAC, Thailand',
     },
   ];
 

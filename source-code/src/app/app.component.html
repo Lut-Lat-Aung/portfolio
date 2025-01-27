@@ -3,11 +3,11 @@
   <!-- <div class="rotating-text">
       
     <p>
-      <span class="word alizarin">Hello</span>
-      <span class="word wisteria">Bonjour</span>
-      <span class="word alizarin">Hola</span>
-      <span class="word wisteria">こんにちは</span>
-      <span class="word sun-flower">привет</span>
+      <span class="word letter alizarin">Hello</span>
+      <span class="word letter wisteria">Bonjour</span>
+      <span class="word letter alizarin">Hola</span>
+      <span class="word letter wisteria">こんにちは</span>
+      <span class="word letter sun-flower">привет</span>
     </p>
 
   </div> -->
@@ -21,9 +21,10 @@
     <p class="typing-text">
       {{ currentText }}    </p>
     </div>
-    <p>Scroll down to explore my portfolio</p>
-    <a (click)="scrolltocontent()" href="#content" class="scroll-btn">▼</a>
   </div>
+  
+  <p class="scrolldown">Scroll down to explore my portfolio</p>
+  <a (click)="scrolltocontent()" href="#content" class="scroll-btn">▼</a>
 </div>
 
 
@@ -70,12 +71,12 @@
         <div class="inner">
           <div class="tag"><span>#</span> Python</div>
           <div class="tag"><span>#</span> React</div>
+          <div class="tag"><span>#</span> TypeScript</div>
           <div class="tag"><span>#</span> Angular</div>
           <div class="tag"><span>#</span> Next.js</div>
-          <div class="tag"><span>#</span> UI/UX</div>
+          <div class="tag"><span>#</span> Data Mining</div>
           <div class="tag"><span>#</span> AR Dev</div>
           <div class="tag"><span>#</span> Android Dev</div>
-          <div class="tag"><span>#</span> Data Mining</div>
           <div class="tag"><span>#</span> C++</div>
           <div class="tag"><span>#</span> C#</div>
           <div class="tag"><span>#</span> Unity</div>
@@ -84,12 +85,12 @@
           <!-- duplicated content -->
           <div class="tag"><span>#</span> Python</div>
           <div class="tag"><span>#</span> React</div>
+          <div class="tag"><span>#</span> TypeScript</div>
           <div class="tag"><span>#</span> Angular</div>
           <div class="tag"><span>#</span> Next.js</div>
-          <div class="tag"><span>#</span> UI/UX</div>
+          <div class="tag"><span>#</span> Data Mining</div>
           <div class="tag"><span>#</span> AR Dev</div>
           <div class="tag"><span>#</span> Android Dev</div>
-          <div class="tag"><span>#</span> Data Mining</div>
           <div class="tag"><span>#</span> C++</div>
           <div class="tag"><span>#</span> C#</div>
           <div class="tag"><span>#</span> Unity</div>
@@ -108,20 +109,20 @@
     <div class="project-cards">
       <mat-card class="project-card" *ngFor="let project of projects">
         <mat-card-header>
-          <mat-card-title>{{ project.title }}</mat-card-title>
+          <mat-card-title style="color:#00d4ff">{{ project.title }}</mat-card-title>
         </mat-card-header>
         <mat-card-content>
           <p>{{ project.description }}</p>
         </mat-card-content>
         
-        <mat-card-actions>
+        <mat-card-actions >
           <a style="margin-left:5px">View -</a>
           <a *ngIf="project.link">
-          <button mat-button color=""  (click)="openProject(project.link || 'https://github.com/Lut-Lat-Aung')">Project</button>
+          <button style="color:white" mat-button color=""  (click)="openProject(project.link || 'https://github.com/Lut-Lat-Aung')">Project</button>
           
           <a style="margin-left:5px">or</a>
         </a>
-          <button mat-button color="" (click)="openProject(project.github || 'https://github.com/Lut-Lat-Aung')">Github</button>
+          <button style="color:white" mat-button color="" (click)="openProject(project.github || 'https://github.com/Lut-Lat-Aung')">Github</button>
         </mat-card-actions>
       </mat-card>
     </div>
@@ -158,8 +159,8 @@
   <div class="contact-section">
     <h2>Contact Me</h2>
     <div class="contact-details">
-      <p><i class="fas fa-envelope"></i> <a href="mailto:lutlataung03@gmail.com">lutlataung03&#64;gmail.com</a></p>
-      <p><i class="fab fa-github"></i> <a href="https://github.com/Lut-Lat-Aung" target="_blank">My GitHub</a></p>
+      <p><i class="fas fa-envelope"></i> <a href="mailto:lutlataung03@gmail.com" style="color: white">lutlataung03&#64;gmail.com</a></p>
+      <p><i class="fab fa-github"></i> <a href="https://github.com/Lut-Lat-Aung" style="color: white" target="_blank">My GitHub</a></p>
     </div>
   </div>
   </div>

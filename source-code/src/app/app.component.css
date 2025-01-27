@@ -1,5 +1,5 @@
 .landing-page {
-  background: linear-gradient(135deg, rgba(0, 123, 255, 0.9), rgba(0, 212, 255, 0.9)), url('/assets/herobackground.gif') no-repeat center center ;
+  background: linear-gradient(135deg, black, rgba(0, 212, 255, 0.9)), url('/assets/herobackground.gif') no-repeat center center ;
   background-size: cover; /* Ensures the GIF covers the section */
   width: 100%; /* Full width */
   height: 100vh; /* Full viewport height */
@@ -12,7 +12,7 @@
 }
 
 .hero-section{
-  background: linear-gradient(135deg, rgba(0, 123, 255, 0.7), rgba(0, 212, 255, 0.7)), url('/assets/landingbackground.gif') no-repeat;
+  background: linear-gradient(135deg, rgba(0, 123, 255, 0.7), black), url('/assets/landingbackground.gif') no-repeat;
   background-size: cover; /* Ensures the GIF covers the section */
 }
 
@@ -76,9 +76,12 @@ html{
   opacity:.8
 }
 
+
+
 .intro .typing-text{
   font-size:1.5rem;
-  margin-top:20px
+  margin-top:20px;
+  /* border: 2px solid black; */
 }
 
 @media (max-width:480px){
@@ -92,7 +95,16 @@ html{
   
 }
 
+
+.scrolldown{
+  position:absolute;
+  bottom:100px;
+  
+}
+
 .scroll-btn{
+  position: absolute;
+  bottom: 50px;
   display:inline-block;
   margin-top:30px;
   font-size:2rem;
@@ -104,7 +116,7 @@ html{
   color:#00d4ff
 }
 #content{
-  background-color:beige;
+  background: linear-gradient(255deg, rgba(1, 190, 227, 0.9), black);
 }
 @keyframes pop-in{
   0%{opacity:0;transform:scale(.8)}
@@ -225,7 +237,8 @@ html{
 .projects-section h2,
 .skills-section h2{
   font-size:2rem;
-  margin-bottom:15px
+  margin-bottom:15px;
+  color: white;
 }
 
 .skills-container,
@@ -264,11 +277,13 @@ html{
   display:flex;
   gap:20px;
   flex-wrap:wrap;
-  justify-content:center
+  justify-content:center;
 }
 
 .project-card{
-  width:300px
+  width:300px;
+  background: #2a2a40;
+  color: white;
 }
 
 .education-item h3,
@@ -288,21 +303,21 @@ h2{text-align:center;font-size:2rem}
 .education-cards,
 .experience-cards{display:flex;flex-wrap:wrap;gap:20px;justify-content:center}
 
-.experience-card{background-color:#f1f1f1}
+.experience-card{background-color:#2a2a40; color: white}
 
-.education-card h3,.experience-card h3{margin:0;font-size:1.5rem;color:#007bff}
+.education-card h3,.experience-card h3{margin:0;font-size:1.5rem;color:#00d4ff}
 
 .experience-card h4{margin:5px 0;font-size:1.2rem;font-weight:700}
 
-.experience-card .duration{font-size:.9rem;color:gray;margin:10px 0}
+.experience-card .duration{font-size:.9rem;color:#00d4ff;margin:10px 0}
 
 .experience-card .description{font-size:1rem;line-height:1.5}
 
-.education-card{background-color:#fff;border:2px solid #007bff;border-radius:10px}
+.education-card{background-color:#2a2a40; color: white}
 
-.education-card h4{margin:5px 0;font-size:1.2rem;color:#333}
+.education-card h4{margin:5px 0;font-size:1.2rem;color:white}
 
-.education-card .duration{font-size:.9rem;color:gray;margin-top:10px}
+.education-card .duration{font-size:.9rem;color:#00d4ff;margin-top:10px}
 
 .contact-section{margin:40px 0;text-align:center}.contact-details{font-size:1.2rem}
 
@@ -310,7 +325,7 @@ h2{text-align:center;font-size:2rem}
   margin:10px 0;
   display:flex;justify-content:center;align-items:center;gap:10px}
   
-.contact-details i{color:#007bff;font-size:1.5rem}
+.contact-details i{color:#00d4ff;font-size:1.5rem}
 
 
 /* This is rotating text animation */
@@ -324,7 +339,7 @@ h2{text-align:center;font-size:2rem}
   font-size: 40px;
   margin-bottom: 50px;
   color: white;
-  transform: translateX(-90px);
+  transform: translateX(-100px);
   border: 2px black solid;
   align-items: center;
   p {
