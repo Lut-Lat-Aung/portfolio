@@ -13,6 +13,54 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
+
+  //Rotating Text
+  ngAfterViewInit() {
+    const words = document.querySelectorAll(".word");
+    words.forEach(word => {
+      const letters = word.textContent ? word.textContent.split("") : [];
+      word.textContent = "";
+      letters.forEach(letter => {
+        const span = document.createElement("span");
+        span.textContent = letter;
+        span.className = "letter";
+        word.append(span);
+      });
+    });
+
+    let currentWordIndex = 0;
+    const maxWordIndex = words.length - 1;
+    (words[currentWordIndex] as HTMLElement).style.opacity = "1";
+
+    const rotateText = () => {
+      const currentWord = words[currentWordIndex];
+      const nextWord =
+        currentWordIndex === maxWordIndex ? words[0] : words[currentWordIndex + 1];
+
+      // Rotate out letters of the current word
+      Array.from(currentWord.children).forEach((letter, i) => {
+        setTimeout(() => {
+          letter.className = "letter out";
+        }, i * 80);
+      });
+
+      // Reveal and rotate in letters of the next word
+      (nextWord as HTMLElement).style.opacity = "1";
+      Array.from(nextWord.children).forEach((letter, i) => {
+        letter.className = "letter behind";
+        setTimeout(() => {
+          letter.className = "letter in";
+        }, 340 + i * 80);
+      });
+
+      currentWordIndex =
+        currentWordIndex === maxWordIndex ? 0 : currentWordIndex + 1;
+    };
+
+    rotateText();
+    setInterval(rotateText, 4000);
+  }
+  
   sentences = [
     
     "The developer who brings your ideas to life.",
@@ -135,6 +183,8 @@ export class AppComponent implements OnInit {
   openProject(url: string) {
     window.open(url, '_blank');
   }
+
+  
 
   // Skills Data
   skills = ['Python','JavaScript','SQL','MongoDB','Java', 'Angular', 'MongoDB', 'Unity', 'TypeScript', 'CSS', 'HTML'];
