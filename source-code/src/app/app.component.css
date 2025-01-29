@@ -37,10 +37,10 @@ html{
 .about-section,.hero-section{
   padding:50px 20px;
   text-align:center;
+  border-radius:10px;
   color:#fff}
   
 .hero-section{
-  border-radius:10px;
   margin-bottom:30px
 }
 
@@ -89,8 +89,9 @@ html{
     font-size:2rem
   
   }
-  .intro p{
-    font-size:1rem
+
+  .intro .typing-text{
+    font-size:1rem;
   }
   
 }
@@ -216,6 +217,18 @@ html{
   margin-bottom:15px
 }
 @media (max-width:768px){
+  .hero-section h1{
+    font-size: 1.5rem;
+  }
+
+  .hero-section p{
+    font-size: 0.9rem;
+  }
+
+  .section-title{
+    font-size: 1.9rem;
+  }
+
   .about-container,.about-text{
     text-align:center}
     
@@ -392,10 +405,13 @@ h2{text-align:center;font-size:2rem}
 /* this is for endless skill scroll */
 
 .app {
-  width:fit-content;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
+  /* align-items: center; */
+  overflow: hidden; /* This hide the oveflowing skill loop display */
+  /* width: 100%; */
+  /* padding: 20px 0; */
+  /* background: linear-gradient(135deg, #007bff, #00d4ff); */
 }
 
 
