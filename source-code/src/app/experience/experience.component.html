@@ -1,0 +1,12 @@
+<div *ngIf="experience.length > 0" class="experience-section">
+    <h2>Experience</h2>
+    <div class="experience-cards">
+    <div class="experience-card" *ngFor="let exp of experience">
+      <h3>{{ exp.name }}</h3>
+      <h4>{{ exp.project }}</h4>
+      <p class="duration">{{ exp.duration }}</p>
+      <div class="">{{ exp.description }}</div>
+    </div>
+  </div>
+</div>
+

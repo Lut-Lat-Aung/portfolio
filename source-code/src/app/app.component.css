@@ -273,6 +273,7 @@ html{
 }
 
 .education-card,.experience-card{
+  border-radius:10px;
   padding:20px;
   width:300px;
   text-align:center
@@ -338,7 +339,7 @@ h2{text-align:center;font-size:2rem}
   margin:10px 0;
   display:flex;justify-content:center;align-items:center;gap:10px}
   
-.contact-details i{color:#00d4ff;font-size:1.5rem}
+.contact-details{color:#00d4ff;font-size:1.5rem}
 
 
 /* This is rotating text animation */

@@ -1,0 +1,11 @@
+<div *ngIf="education.length > 0" class="education-section">
+    <h2>Education</h2>
+    <div class="education-cards">
+    <div class="education-card" *ngFor="let edu of education">
+      <h3>{{ edu.degree }}</h3>
+      <h4>{{ edu.institute }}</h4>
+      <p class="duration">{{ edu.duration }}</p>
+    </div>
+  </div>
+</div>
+

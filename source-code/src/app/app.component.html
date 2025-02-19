@@ -1,16 +1,6 @@
 
 <div class="landing-page" id="landing">
-  <!-- <div class="rotating-text">
-      
-    <p>
-      <span class="word letter alizarin">Hello</span>
-      <span class="word letter wisteria">Bonjour</span>
-      <span class="word letter alizarin">Hola</span>
-      <span class="word letter wisteria">こんにちは</span>
-      <span class="word letter sun-flower">привет</span>
-    </p>
-
-  </div> -->
+  
   <div class="intro">
     
     <h1 class="pop-in">
@@ -131,39 +121,20 @@
   </div>
 
   <!-- Experience Section -->
-  <div class="experience-section">
-    <h2>Experience</h2>
-    <div class="experience-cards">
-      <div class="experience-card" *ngFor="let exp of experiences">
-        <h3>{{ exp.role }}</h3>
-        <h4>{{ exp.company }}</h4>
-        <p class="duration">{{ exp.duration }}</p>
-        <p class="description">{{ exp.description }}</p>
-      </div>
-    </div>
-  </div>
+    <experience></experience>
   
 
   <!-- Education Section -->
-  <div class="education-section">
-    <h2>Education</h2>
-    <div class="education-cards">
-      <div class="education-card" *ngFor="let edu of education">
-        <h3>{{ edu.degree || edu.certification }}</h3>
-        <h4>{{ edu.institution || edu.provider }}</h4>
-        <p class="duration">{{ edu.duration }}</p>
-      </div>
-    </div>
-  </div>
+  <education></education>
   
-
   <!-- Contact Section -->
   <div class="contact-section">
     <h2>Contact Me</h2>
     <div class="contact-details">
-      <p><i class="fas fa-envelope"></i> <a href="mailto:lutlataung03@gmail.com" style="color: white">lutlataung03&#64;gmail.com</a></p>
-      <p><i class="fab fa-github"></i> <a href="https://github.com/Lut-Lat-Aung" style="color: white" target="_blank">My GitHub</a></p>
+      <contact></contact>
     </div>
   </div>
+  
+
   </div>
   

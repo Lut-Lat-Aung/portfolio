@@ -1,0 +1,20 @@
+<div *ngIf="contactInfo.length > 0">
+  <div class=" contact-details">
+    <p>
+      <i class="fas fa-envelope "></i> 
+      <a [href]="'mailto:' + contactInfo[0].email" style="color: white">
+        {{ contactInfo[0].email }}
+      </a>
+    </p>
+    
+    <h4>{{ contactInfo[1].phone }}</h4>
+    
+    <p>
+      <i class="fab fa-github"></i> 
+      <a [href]="contactInfo[0].github" style="color: white" target="_blank">
+        {{ contactInfo[2].github }}
+      </a>
+    </p>
+  </div>
+  <br>
+</div>

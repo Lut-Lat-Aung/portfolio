@@ -3,15 +3,20 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatChipsModule } from '@angular/material/chips';
 import { CommonModule } from '@angular/common';
-
+import { HttpClientModule } from '@angular/common/http';  // ✅ Add this line
+import { ContactComponent } from './contact/contact.component';  
+import { EducationComponent } from './education/education.component';
+import { ExperienceComponent } from './experience/experience.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, MatButtonModule, MatCardModule, MatChipsModule],
+  imports: [CommonModule, MatButtonModule, MatCardModule, MatChipsModule, HttpClientModule,  // ✅ Required to fix NullInjectorError,
+  ContactComponent, EducationComponent, ExperienceComponent],  // ✅ Add ContactComponent
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent implements OnInit {
 
   //Rotating Text
@@ -185,36 +190,5 @@ export class AppComponent implements OnInit {
 
   
 
-  // Skills Data
-  skills = ['Python','JavaScript','SQL','MongoDB','Java', 'Angular', 'MongoDB', 'Unity', 'TypeScript', 'CSS', 'HTML'];
-
-  // Experience Data
-  experiences = [
-    
-    {
-      role: 'AR Developer',
-      company: 'AR Navigation System Project',
-      duration: '2023 - 2025',
-      description: 'Developed an AR indoor navigation system using Unity and Vuforia.',
-    },{
-      role: 'Web Developer',
-      company: 'Nest Finders',
-      duration: '2023 - 2024',
-      description: 'Developed a web app to find local household for rent or sell near ABAC, Thailand',
-    },
-  ];
-
-  // Education Data
-  education = [
-    {
-      degree: "Bachelor's Degree in Computer Science",
-      institution: 'Assumption University',
-      duration: '2021 - 2025',
-    },
-    {
-      certification: 'A1 French Level - 18',
-      provider: 'Duolingo',
-      duration: '2024',
-    },
-  ];
+ 
 }
