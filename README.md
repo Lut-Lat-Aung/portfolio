@@ -129,12 +129,6 @@ This project is open-source and available under the [MIT License](LICENSE).
 
 ---
 
-## 🤝 Contributing
-
-Feel free to fork the repository and submit pull requests if you'd like to contribute or improve the project.
-
----
-
 ## 📨 Contact
 
 If you have any questions or feedback, feel free to reach out:
